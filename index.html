@@ -1,122 +1,246 @@
+<!DOCTYPE HTML>
+
 <html lang="en">
 <head>
-  <title>About Me</title>
+  <title>About Me Page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <style>
-        body {
-            font: 20px Montserrat, sans-serif;
-            line-height: 1.8;
-            color: #f5f6f7;
-        }
-        p {font-size: 16px;}
-        .margin {margin-bottom: 45px;}
-        .bg-1 { 
-            background-color: #683535; /* Green */
-            color: #ffffff;
-        }
-        .bg-2 { 
-            background-color: #474e5d; /* Dark Blue */
-            color: #ffffff;
-        }
-        .bg-3 { 
-            background-color: #ffffff; /* White */
-            color: #555555;
-        }
-        .bg-4 { 
-            background-color: #2f2f2f; /* Black Gray */
-            color: #fff;
-        }
-        .container-fluid {
-            padding-top: 10px;
-            padding-bottom: 0px;
-        }
-        .navbar {
-            padding-top: 15px;
-            padding-bottom: 15px;
-            border: 0;
-            border-radius: 0;
-            margin-bottom: 0;
-            font-size: 12px;
-            letter-spacing: 5px;
-        }
-        .navbar-nav  li a:hover {
-            color: #824242 !important;
-        }
 
-        </style>
+ /* Start of Navbar */
+
+  span {
+    color: #ffffff;
+    margin-left: 10px;
+  }
+
+   span:hover {
+    color: #800080
+  }
+
+  .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+
+  }
+
+  .sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+
+  }
+
+  .sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+
+  }
+  .sidenav a:hover {
+  color: #800080;
+      
+  }
+ 
+  @media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+
+  }
+ 
+/* End of Navbar */
+
+/* Start of Main Content */
+
+  #main {
+  transition: margin-left .5s;
+  padding: 0px;
+  background-color: #000000;
+
+  }
+
+  body {
+  font: 20px Montserrat, sans-serif;
+  line-height: 1.8;
+  color: #f5f6f7;
+
+  }
+
+  p {
+    font-size: 100%;
+    text-indent: 5%;
+    }
+
+  .margin {margin-bottom: 95px;}
+
+  .jumbotron { 
+  background-image: url("assets/images/galaxy.jpg");
+  background-size: 100% 100%;
+  color: #ffffff;
+  padding-top: 264px;
+  padding-bottom: 350px;
+
+  }
+
+  .box {
+    width: 50%;
+    border: 5px solid white;
+    padding: 5px;
+    margin: auto;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .bg-1 { 
+  background: linear-gradient(black, white);
+
+  }
+
+  .bg-2 { 
+  background-color: #ffffff; 
+  color: #000000;
+
+  }
+
+  h2 {
+    font-size: 30px;
+    text-decoration: overline underline;
+    text-align: center;
+   
+  }
+
+  .container-fluid {
+  padding-top: 10px;
+  padding-bottom: 100px;
+
+  }
+
+  .container {
+  padding-top: 10px;
+  padding-bottom: 0px;
+
+  }
+
+
+  .img-circle {
+  border-radius: 50%;
+
+  }
+
+/* End of Main Content*/
+
+</style>
+
+
+<!-- Start of javascript -->
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
+    
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+    }
+</script>
+
+<!-- End of javascript -->
+
 <body>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" class="disabled">Dorian Macias</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="portfolio.html"><span class="glyphicon glyphicon-user"></span> Portfolio</a></li>
-        <li><a href="contact.html"><span class="glyphicon glyphicon-envelope"></span> Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-    
+<!-- Start of  Sidebar Specific -->
 
-<!-- First Container -->
-<div class="container-fluid bg-1 text-center">
-        <h3 class="margin">About Me</h3>
-        <img src="assets/images/rockgym.png" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
-        <h3>Dorian Macias</h3>
-      </div>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a>
+        <a href="portfolio.html"><span class="glyphicon glyphicon-user"></span> Portfolio</a>
+        <a href="contact.html"><span class="glyphicon glyphicon-envelope"></span> Contact</a>
+    </div>
+
+<!-- End of Sidebar Specific -->
+
+<!-- =========================================================All Content Starts In Here====================================================================================== -->
       
-      <!-- Third Container (Grid) -->
-      <div class="container-fluid bg-3 text-center">    
-        <h3 class="margin">A little bit about me</h3><br>
+  <div id="main">
+
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+<!-- Start of Jumbotron Containing Header and Banner -->
+
+  <div class="jumbotron">
+    <div class="container text-center">
+      <div class="box">
+        <h1>Dorian Macias</h1>      
+        <p>Up And Coming Full Stack Web Developer</p>
+      </div>
+    </div>
+  </div>  
+
+<!-- End of Jumbotron -->
+  
+<!-- Start of Empty Div Containing Black To White Gradient -->
+
+      <div class="container-fluid bg-1 text-center">    
+      </div>
+
+<!-- End of Empty Div Containing Black To White Gradient -->
+
+<!-- Start of Div Containing My Picture and Info on Myself -->
+
+      <div class="container-fluid bg-2">    
+          <h2 class="margin">A little bit about me</h2><br>
         <div class="row">
-          <div class="col-sm-4">
-            <p>I love computers, growing up as a kid i spent alot of time around one of my more tech-savy uncles. I'd watch him
-            build and take apart computers all the time. Which caused me to have a great curiousity about how every single aspect
-            of them work from the hardware to the coding that went into making them work.
+
+          <div class="col-md-8"> 
+            <p>Growing up I've always had a passion for seeing how things work and a crazy desire to build and create. Channeling that into Full stack web development was an easy transition considering into computers I am.
+              I'll be a strong a to any team that I'm put into with the skillset I've developed in the past and will continue to develop well into the future of my career. 
             </p>
-            <img src="assets/images/worker.jpg" class="img-responsive margin" style="width:100%" alt="Image">
           </div>
           <div class="col-sm-4"> 
-            <p>Driving around and traveling are two of my greater passion. Although I haven't even ventured that far outside California
-               even taking the scenic route on the way home is something I absolutely love to do. I hope that with the skills I gain from
-               this course it will open the door for me to purse these passsions even further.
-            </p>
-            <img src="assets/images/travel.jpg" class="img-responsive margin" style="width:100%" alt="Image">
-          </div>
-          <div class="col-sm-4"> 
-            <p>Nature, what alot of people that in this profession would find the be their mortal enemy, I can't
-               get enough of. The fresh crisp, the dew drops on the grass early in the morning it's amazing. It's a great way to
-               unwind after a stressful week of work and helps me apply myself further when I have to go back to reality.
-            </p>
-            <img src="assets/images/nature.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+
+            <img src="assets/images/me.jpg" alt="Placeholder" class="img-circle" style="width:360px; height:360px;">
+
           </div>
         </div>
       </div>
+
+<!-- End of Div Containing My Picture and Info on Myself -->
       
-      <!-- Footer -->
-      <footer class="container-fluid bg-4 text-center">
+<!-- Start of Footer -->
+
+      <footer class="container bg-3 text-center">
         <p>&#169; Copyright 2018 Dorian Macias</p> 
       </footer>
 
+<!-- End of Footer -->
 
+</div>
+
+<!-- =========================================================All Content Ends In Here========================================================================================= -->
 
 </body>
 </html>

@@ -1,128 +1,247 @@
+<!DOCTYPE HTML>
+
 <html lang="en">
 <head>
-  <title>Portfolio</title>
+  <title>Portfolio Page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <style>
-        body {
-            font: 20px Montserrat, sans-serif;
-            line-height: 1.8;
-            color: #f5f6f7;
-        }
-        p {font-size: 16px;}
-        .margin {margin-bottom: 45px;}
-        .bg-3 { 
-            background-color: #683535; /* Green */
-            color: #ffffff;
-        }
-        .bg-2 { 
-            background-color: #474e5d; /* Dark Blue */
-            color: #ffffff;
-        }
-        .bg-3 { 
-            background-color: #ffffff; /* White */
-            color: #555555;
-        }
-        .bg-4 { 
-            background-color: #2f2f2f; /* Black Gray */
-            color: #fff;
-        }
-        .container-fluid {
-            padding-top: 0px;
-            padding-bottom: 0px;
-        }
-        .navbar {
-            padding-top: 15px;
-            padding-bottom: 15px;
-            border: 0;
-            border-radius: 0;
-            margin-bottom: 0;
-            font-size: 12px;
-            letter-spacing: 5px;
-        }
-        .navbar-nav  li a:hover {
-            color: #683535 !important;
-        }
-        .jumbotron {
-            background-color: #683535;
-        }
-        </style>
-<body>
-<!-- Start of Nav Bar -->
+  
+  span {
+    color: #ffffff;
+    margin-left: 10px;
+  
+  }
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#" class="disabled">Dorian Macias</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="portfolio.html"><span class="glyphicon glyphicon-user"></span> Portfolio</a></li>
-        <li><a href="contact.html"><span class="glyphicon glyphicon-envelope"></span> Contact</a></li>
-      </ul>
+
+  .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+
+  }
+
+  .sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+
+  }
+
+  .sidenav a:hover {
+  color: #800080;
+      
+  }
+
+  span:hover {
+  color: #800080;
+  }
+
+  .sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+
+  }
+
+  #main {
+  transition: margin-left .5s;
+  padding: 0px;
+  background-color: #000000;
+
+  }
+
+  @media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+
+  }
+
+  body {
+  font: 20px Montserrat, sans-serif;
+  line-height: 1.8;
+  color: #f5f6f7;
+
+  }
+
+  p {font-size: 16px;}
+
+  .margin {margin-bottom: 95px;}
+
+  .jumbotron { 
+  background-image: url("assets/images/galaxy.jpg");
+  background-size: 100% 100%;
+  color: #ffffff;
+  padding-top: 264px;
+  padding-bottom: 350px;
+
+  }
+
+  .box {
+    width: 50%;
+    border: 5px solid white;
+    padding: 5px;
+    margin: auto;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .bg-1 { 
+  background: linear-gradient(black, white);
+
+  }
+
+  .bg-2 { 
+  background-color: #ffffff; 
+  color: #000000;
+
+  }
+
+  h3 {
+    font-size: 30px;
+    text-decoration: overline underline;
+    text-align: center;
+   
+  }
+
+  .container-fluid {
+  padding-top: 10px;
+  padding-bottom: 100px;
+
+  }
+
+  .container {
+  padding-top: 10px;
+  padding-bottom: 0px;
+
+  }
+
+  .Me {
+    border-radius: 10px;
+    height: 60%;
+  }
+
+</style>
+
+<!-- Start of javascript -->
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
+    
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+    }
+</script>
+
+<!-- End of javascript -->
+
+<body>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a>
+        <a href="portfolio.html"><span class="glyphicon glyphicon-user"></span> Portfolio</a>
+        <a href="contact.html"><span class="glyphicon glyphicon-envelope"></span> Contact</a>
+      </div>
+
+      <div id="main">
+
+          <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+ <!-- =========================================================All Content Starts In Here====================================================================================== -->
+
+
+<!-- Start of Jumbotron -->
+
+  <div class="jumbotron">
+    <div class="container text-center">
+      <div class="box">
+        <h1>My Portfolio</h1>      
+        <p>previous projects</p>
+      </div>
     </div>
   </div>
-</nav>
+  
+<!-- End of Jumbotron -->
+  
+<!-- Start of gradient -->
 
-<!-- End of Nav Bar -->
-
-<!-- Start of Main Content -->
-
-<div class="jumbotron">
-        <div class="container text-center">
-          <h1>My Portfolio</h1>      
-        </div>
+      <div class="container-fluid bg-1 text-center">    
       </div>
-        
-      <div class="container-fluid bg-3 text-center">    
-        <h3>Some of my Work</h3><br>
-        <div class="row">
-          <div class="col-sm-3">
-            <p>HW-WireFrame</p>
+
+<!-- End of gradient -->
+
+
+<!-- Start main content -->
+
+  <div class="container-fluid bg-2">    
+    <h3 class="margin">Some of my work</h3><br>
+      <div class="row">
+
+        <div class="col-sm-3">
+          <p>HW-WireFrame</p>
             <a href="https://dorianinc.github.io/HW-Wireframe/">
-            <img src="assets/images/wireframe.png" class="img-responsive" style="width:100%" alt="Image">
+              <img src="assets/images/wireframe.png" class="img-responsive" style="width:100%" alt="Image">
             </a>
-          </div>
-          <div class="col-sm-3"> 
-            <p>Basic-Portfolio</p>
-            <a href="https://dorianinc.github.io/Basic-Portfolio/">
-            <img src="assets/images/basicportfolio.png" class="img-responsive" style="width:100%" alt="Image">
-            </a>
-          </div>
-          <div class="col-sm-3"> 
-            <p>Stuff</p>
-            <img src="assets/images/wireframe.png" class="img-responsive" style="width:100%" alt="Image">
-          </div>
-          <div class="col-sm-3">
-            <p>Stuff</p>
-            <img src="assets/images/wireframe.png" class="img-responsive" style="width:100%" alt="Image">
-          </div>
         </div>
-      </div><br>
+
+        <div class="col-sm-3"> 
+          <p>Basic-Portfolio</p>
+            <a href="https://dorianinc.github.io/Basic-Portfolio/">
+              <img src="assets/images/basicportfolio.png" class="img-responsive" style="width:100%" alt="Image">
+            </a>
+        </div>
+
+        <div class="col-sm-3"> 
+          <p>Stuff</p>
+            <img src="assets/images/wireframe.png" class="img-responsive" style="width:100%" alt="Image">
+        </div>
+
+        <div class="col-sm-3">
+          <p>Stuff</p>
+            <img src="assets/images/wireframe.png" class="img-responsive" style="width:100%" alt="Image">
+        </div>
+
+          
+      </div>
+  </div>
       
+<!-- Start of footer -->
 
+  <footer class="container bg-4 text-center">
+    <p>&#169; Copyright 2018 Dorian Macias</p> 
+  </footer>
 
-<!-- End of Main Content -->
+<!-- End of footer -->
 
-<!-- Start of Footer -->
-      
-      <footer class="container-fluid text-center">
-        <p>Footer Text</p>
-      </footer>
+  <!-- =========================================================All Content Ends In Here========================================================================================= -->
+
+</div>
 
 </body>
 </html>
