@@ -15,168 +15,181 @@
 </head>
 
 <style>
+
+  /* Start of Navbar */
+ 
+   span {
+     color: #ffffff;
+     margin-left: 10px;
+   }
+ 
+    span:hover {
+     color: #800080
+   }
+ 
+   .sidenav {
+   height: 100%;
+   width: 0;
+   position: fixed;
+   z-index: 1;
+   top: 0;
+   left: 0;
+   background-color: #000000;
+   overflow-x: hidden;
+   transition: 0.5s;
+   padding-top: 60px;
+ 
+   }
+ 
+   .sidenav a {
+   padding: 8px 8px 8px 32px;
+   text-decoration: none;
+   font-size: 25px;
+   color: #ffffff;
+   display: block;
+   transition: 0.3s;
+ 
+   }
+ 
+   .sidenav .closebtn {
+   position: absolute;
+   top: 0;
+   right: 25px;
+   font-size: 36px;
+   margin-left: 50px;
+ 
+   }
+   .sidenav a:hover {
+   color: #800080;
+       
+   }
   
-  span {
-    color: #ffffff;
-    margin-left: 10px;
+   @media screen and (max-height: 450px) {
+   .sidenav {padding-top: 15px;}
+   .sidenav a {font-size: 18px;}
+ 
+   }
   
-  }
-
-
-  .sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #000000;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-
-  }
-
-  .sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #ffffff;
-  display: block;
-  transition: 0.3s;
-
-  }
-
-  .sidenav a:hover {
-  color: #800080;
-      
-  }
-
-  span:hover {
-  color: #800080;
-  }
-
-  .sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-
-  }
-
-  #main {
-  transition: margin-left .5s;
-  padding: 0px;
-  background-color: #000000;
-
-  }
-
-  @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-
-  }
-
-  body {
-  font: 20px Montserrat, sans-serif;
-  line-height: 1.8;
-  color: #f5f6f7;
-
-  }
-
-  p {font-size: 16px;}
-
-  .margin {margin-bottom: 95px;}
-
-  .jumbotron { 
-  background-image: url("assets/images/galaxy.jpg");
-  background-size: 100% 100%;
-  color: #ffffff;
-  padding-top: 264px;
-  padding-bottom: 350px;
-
-  }
-
-  .box {
-    width: 50%;
-    border: 5px solid white;
-    padding: 5px;
-    margin: auto;
-    font-weight: bold;
-    font-family: 'Raleway', sans-serif;
-  }
-
-  .bg-1 { 
-  background: linear-gradient(black, white);
-
-  }
-
-  .bg-2 { 
-  background-color: #ffffff; 
-  color: #000000;
-
-  }
-
-  h3 {
-    font-size: 30px;
-    text-decoration: overline underline;
-    text-align: center;
-   
-  }
-
-  .container-fluid {
-  padding-top: 10px;
-  padding-bottom: 100px;
-
-  }
-
-  .container {
-  padding-top: 10px;
-  padding-bottom: 0px;
-
-  }
-
-  .Me {
-    border-radius: 10px;
-    height: 60%;
-  }
-
-</style>
-
-<!-- Start of javascript -->
-
-<script>
-    function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
-        document.getElementById("main").style.marginLeft = "250px";
-    }
+ /* End of Navbar */
+ 
+ /* Start of Main Content */
+ 
+   #main {
+   transition: margin-left .5s;
+   padding: 0px;
+   background-color: #000000;
+ 
+   }
+ 
+   body {
+   font: 20px Montserrat, sans-serif;
+   line-height: 1.8;
+   color: #f5f6f7;
+ 
+   }
+ 
+   p {
+     font-size: 100%;
+     text-indent: 5%;
+     }
+ 
+   .margin {margin-bottom: 95px;}
+ 
+   .jumbotron { 
+   background-image: url("assets/images/galaxy.jpg");
+   background-size: 100% 100%;
+   color: #ffffff;
+   padding-top: 264px;
+   padding-bottom: 350px;
+ 
+   }
+ 
+   .box {
+     width: 50%;
+     border: 5px solid white;
+     padding: 5px;
+     margin: auto;
+     font-weight: bold;
+     font-family: 'Raleway', sans-serif;
+   }
+ 
+   .bg-1 { 
+   background: linear-gradient(black, white);
+ 
+   }
+ 
+   .bg-2 { 
+   background-color: #ffffff; 
+   color: #000000;
+ 
+   }
+ 
+   h2 {
+     font-size: 30px;
+     text-decoration: overline underline;
+     text-align: center;
     
-    function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-        document.getElementById("main").style.marginLeft= "0";
-    }
-</script>
-
-<!-- End of javascript -->
+   }
+ 
+   .container-fluid {
+   padding-top: 10px;
+   padding-bottom: 100px;
+ 
+   }
+ 
+   .container {
+   padding-top: 10px;
+   padding-bottom: 0px;
+ 
+   }
+ 
+ 
+   .img-circle {
+   border-radius: 50%;
+ 
+   }
+ 
+ /* End of Main Content*/
+ 
+ </style>
+ 
+ 
+ <!-- Start of javascript -->
+ 
+ <script>
+     function openNav() {
+         document.getElementById("mySidenav").style.width = "250px";
+         document.getElementById("main").style.marginLeft = "250px";
+     }
+     
+     function closeNav() {
+         document.getElementById("mySidenav").style.width = "0";
+         document.getElementById("main").style.marginLeft= "0";
+     }
+ </script>
+ 
+ <!-- End of javascript -->
 
 <body>
 
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a>
-        <a href="portfolio.html"><span class="glyphicon glyphicon-user"></span> Portfolio</a>
-        <a href="contact.html"><span class="glyphicon glyphicon-envelope"></span> Contact</a>
-      </div>
+<!-- Start of  Sidebar Specific -->
 
-      <div id="main">
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a>
+  <a href="portfolio.html"><span class="glyphicon glyphicon-user"></span> Portfolio</a>
+  <a href="contact.html"><span class="glyphicon glyphicon-envelope"></span> Contact</a>
+</div>
 
-          <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+<!-- End of Sidebar Specific -->
 
- <!-- =========================================================All Content Starts In Here====================================================================================== -->
+<!-- =========================================================All Content Starts In Here====================================================================================== -->
 
+  <div id="main">
 
-<!-- Start of Jumbotron -->
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+<!-- Start of Jumbotron Containing Header and Banner -->
 
   <div class="jumbotron">
     <div class="container text-center">
@@ -189,18 +202,18 @@
   
 <!-- End of Jumbotron -->
   
-<!-- Start of gradient -->
+<!-- Start of Empty Div Containing Black To White Gradient -->
 
-      <div class="container-fluid bg-1 text-center">    
-      </div>
+<div class="container-fluid bg-1 text-center">    
+</div>
 
-<!-- End of gradient -->
+<!-- End of Empty Div Containing Black To White Gradient -->
 
 
-<!-- Start main content -->
+<!-- Start Main Content Containing Previous Work -->
 
   <div class="container-fluid bg-2">    
-    <h3 class="margin">Some of my work</h3><br>
+    <h2 class="margin">Some of my work</h2><br>
       <div class="row">
 
         <div class="col-sm-3">
@@ -230,6 +243,8 @@
           
       </div>
   </div>
+
+<!-- End of Main Content Containing Previous Work -->
       
 <!-- Start of footer -->
 
@@ -237,11 +252,11 @@
     <p>&#169; Copyright 2018 Dorian Macias</p> 
   </footer>
 
-<!-- End of footer -->
-
-  <!-- =========================================================All Content Ends In Here========================================================================================= -->
+<!-- End of Footer -->
 
 </div>
+
+<!-- =========================================================All Content Ends In Here========================================================================================= -->
 
 </body>
 </html>
